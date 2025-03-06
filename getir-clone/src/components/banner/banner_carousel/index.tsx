@@ -24,6 +24,7 @@ function index() {
       snapToInterval={styles.banner_image.width}
       snapToAlignment={"center"}
       decelerationRate={"fast"}
+      style={styles.bannerContainer}
     ></FlatList>
   );
 }

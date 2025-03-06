@@ -4,14 +4,13 @@ import { StyleSheet, Dimensions } from "react-native";
 const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
-  bannerContainer: {
-    width: width,
-    height: height * 0.25,
-  },
-  banner_image: {
-    width: width,
-    height: height * 0.25,
-    resizeMode: "stretch",
+  listContainer: {
+    flex: 1,
+    backgroundColor: Colors.main.background,
+    flexDirection: "row",
+    alignItems: "flex-start",
+    flexWrap: "wrap",
+    marginTop: 10,
   },
 });
 

@@ -10,6 +10,9 @@ export const Colors = {
   main: {
     yellow: "#fbd30c",
     purple: "#5D3EBD",
+    background: "#F5F5F5",
+    categoriesBarBackground: "#784AF6",
+    subCategoriesBarBackground: "white",
   },
   light: {
     text: "#11181C",
@@ -30,6 +33,9 @@ export const Colors = {
   HomeScreen: {
     header: {
       yellow: "#F7D102",
+    },
+    CategoryFilterBar: {
+      barBackground: "#784AF6",
     },
   },
 };

@@ -11,6 +11,6 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts",
-    "src/screens/HomeScreen/index.tss"
+    "src/screens/HomeScreen/index.tsx"
   ]
 }

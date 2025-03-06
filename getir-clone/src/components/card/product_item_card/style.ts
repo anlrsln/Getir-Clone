@@ -1,0 +1,67 @@
+import { Colors } from "@/src/constants/Colors";
+import { StyleSheet, Dimensions } from "react-native";
+
+const { width, height } = Dimensions.get("window");
+
+const styles = StyleSheet.create({
+  cardContainer: {
+    marginTop: 8,
+    margin: 5,
+    width: width * 0.28,
+    height: height * 0.25,
+    borderRadius: 10,
+    backgroundColor: "white",
+    shadowColor: "#000",
+  },
+  image: {
+    width: width * 0.28,
+    height: width * 0.28,
+    borderWidth: 0.5,
+    borderColor: "lightgrey",
+    borderRadius: 12,
+  },
+  cardTextBody: {
+    marginTop: 5,
+    flexDirection: "row",
+  },
+  discountedPriceText: {
+    marginRight: 5,
+    fontSize: 12,
+    color: "grey",
+    textDecorationLine: "line-through",
+    fontWeight: "bold",
+  },
+  priceText: {
+    fontSize: 12,
+    color: Colors.main.purple,
+    fontWeight: "bold",
+  },
+  productNameText: {
+    marginTop: 5,
+    fontSize: 12,
+    fontWeight: "600",
+  },
+  productAmountText: {
+    marginTop: 5,
+    fontSize: 12,
+    fontWeight: "600",
+    color: "grey",
+  },
+  addProductButton: {
+    width: 30,
+    height: 30,
+    position: "absolute",
+    right: -6,
+    top: -6,
+    backgroundColor: "white",
+    borderRadius: 10,
+    borderWidth: 0.2,
+    borderColor: "lightgrey",
+    justifyContent: "center",
+    alignItems: "center",
+    shadowRadius: 5,
+    shadowOpacity: 0.1,
+  },
+});
+
+export default styles;
