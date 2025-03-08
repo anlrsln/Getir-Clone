@@ -6,9 +6,8 @@ const { width, height } = Dimensions.get("window");
 const styles = StyleSheet.create({
   cardContainer: {
     marginTop: 8,
-    margin: 5,
-    width: width * 0.28,
-    height: height * 0.25,
+    width: width * 0.3,
+    height: height * 0.24,
     borderRadius: 10,
     backgroundColor: "white",
     shadowColor: "#000",

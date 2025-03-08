@@ -1,7 +1,7 @@
 import React from "react";
 import { ScrollView } from "react-native";
 import HomeScreenHeader from "../../components/headers/home_screen_header";
-import BannerCarousel from "../../components/banner/banner_carousel";
+import BannerCarousel from "../../components/carousel/banner_carousel";
 import styles from "./styles";
 import MainCategories from "../../components/category/main_category";
 

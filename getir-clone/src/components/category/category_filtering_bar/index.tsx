@@ -1,7 +1,7 @@
 import { View, Text, ScrollView } from "react-native";
 import React, { useState } from "react";
 import styles from "./style";
-import { Category } from "@/src/models";
+import { Category } from "@/src/models/category/CategoryModal";
 import categoriesGetir from "@/assets/categoriesGetir";
 import { Colors } from "@/src/constants/Colors";
 

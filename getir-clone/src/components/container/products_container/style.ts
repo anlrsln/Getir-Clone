@@ -7,8 +7,8 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     backgroundColor: "white",
     borderRadius: 10,
-    alignItems: "center",
     paddingVertical: 10,
+    justifyContent: "space-evenly",
   },
   containerTitle: {
     color: "gray",

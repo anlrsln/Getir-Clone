@@ -1,7 +1,7 @@
 import React from "react";
 import { TouchableOpacity, Image, Text } from "react-native";
 import styles from "./style";
-import { Category } from "@/src/models";
+import { Category } from "@/src/models/category/CategoryModal";
 import { useNavigation } from "@react-navigation/native";
 
 type categoriesItemProps = {

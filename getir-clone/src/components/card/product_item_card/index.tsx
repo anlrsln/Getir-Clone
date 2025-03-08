@@ -3,15 +3,24 @@ import React from "react";
 import styles from "./style";
 import Entypo from "@expo/vector-icons/Entypo";
 import { Colors } from "@/src/constants/Colors";
-import { Product } from "@/src/models/product/ProductModel";
+import { Product } from "@/src/models/product/ProductModal";
+import { useNavigation } from "@react-navigation/native";
 
 type productType = {
   product: Product;
 };
 
 const ProductItemCard = ({ product }: productType) => {
+  const navigation = useNavigation();
   return (
-    <TouchableOpacity style={styles.cardContainer}>
+    <TouchableOpacity
+      style={styles.cardContainer}
+      onPress={() => {
+        (navigation.navigate as any)("DetailScreen", {
+          selectedProduct: product,
+        });
+      }}
+    >
       <Image
         style={styles.image}
         source={{
