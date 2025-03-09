@@ -7,6 +7,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import HomeNavigator from "./HomeNavigator";
 import CustomBottomTabButton from "../components/buttons/bottomnav_custom_tab_bar";
+import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 
 const Tab = createBottomTabNavigator();
 
@@ -14,16 +15,20 @@ function RootNavigator() {
   return (
     <Tab.Navigator
       initialRouteName="Home"
-      screenOptions={{
+      screenOptions={({ route }) => ({
+        tabBarStyle: ((route) => {
+          const routeName = getFocusedRouteNameFromRoute(route);
+          if (routeName === "DetailScreen") {
+            return { display: "none" };
+          }
+          return { display: "flex" };
+        })(route),
         headerShown: false,
         tabBarShowLabel: false,
-        tabBarStyle: {
-          height: 80,
-        },
         tabBarActiveTintColor: Colors.main.purple,
         tabBarInactiveTintColor: "lightgray",
         tabBarHideOnKeyboard: true,
-      }}
+      })}
     >
       <Tab.Screen
         name="Home"

@@ -5,6 +5,7 @@ import Entypo from "@expo/vector-icons/Entypo";
 import { Colors } from "@/src/constants/Colors";
 import { Product } from "@/src/models/product/ProductModal";
 import { useNavigation } from "@react-navigation/native";
+import PriceCard from "../price_card";
 
 type productType = {
   product: Product;
@@ -27,16 +28,7 @@ const ProductItemCard = ({ product }: productType) => {
           uri: product.image,
         }}
       />
-      <View style={styles.cardTextBody}>
-        <Text style={styles.discountedPriceText}>
-          <Text>{"\u20BA"}</Text>
-          {product.fiyat}
-        </Text>
-        <Text style={styles.priceText}>
-          <Text>{"\u20BA"}</Text>
-          {product.fiyatIndirimli}
-        </Text>
-      </View>
+      <PriceCard product={product} fontSize={12} />
       <Text style={styles.productNameText}>{product.name}</Text>
       <Text style={styles.productAmountText}>{product.miktar}</Text>
       <View style={styles.addProductButton}>

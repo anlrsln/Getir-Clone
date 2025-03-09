@@ -19,22 +19,6 @@ const styles = StyleSheet.create({
     borderColor: "lightgrey",
     borderRadius: 12,
   },
-  cardTextBody: {
-    marginTop: 5,
-    flexDirection: "row",
-  },
-  discountedPriceText: {
-    marginRight: 5,
-    fontSize: 12,
-    color: "grey",
-    textDecorationLine: "line-through",
-    fontWeight: "bold",
-  },
-  priceText: {
-    fontSize: 12,
-    color: Colors.main.purple,
-    fontWeight: "bold",
-  },
   productNameText: {
     marginTop: 5,
     fontSize: 12,

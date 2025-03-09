@@ -6,6 +6,8 @@ import styles from "./style";
 import { Product } from "@/src/models/product/ProductModal";
 import ProductImageCarousel from "@/src/components/carousel/product_image_carousel";
 import { Colors } from "@/src/constants/Colors";
+import DetailScreenHeadBox from "@/src/components/container/detail_screen_container";
+import PriceCard from "@/src/components/card/price_card";
 
 type DetailScreenRouteProp = RouteProp<RootStackParamList, "DetailScreen">;
 
@@ -21,7 +23,7 @@ const DetailScreen = () => {
   } else {
     return (
       <View style={styles.carouselContainer}>
-        <ProductImageCarousel images={selectedProduct.images} />
+        <DetailScreenHeadBox product={selectedProduct} />
       </View>
     );
   }

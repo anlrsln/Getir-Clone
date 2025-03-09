@@ -8,7 +8,6 @@ import ProductDetailScreen from "../screen/detail_screen";
 import { Category } from "../models/category/CategoryModal";
 import { Product } from "../models/product/ProductModal";
 import AntDesign from "@expo/vector-icons/AntDesign";
-import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 
 export type RootStackParamList = {
   Home: undefined;
@@ -17,21 +16,8 @@ export type RootStackParamList = {
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
-const tabHiddenRoutes = ["DetailScreen"];
 
-function MainStack({ navigation, route }: any) {
-  React.useLayoutEffect(() => {
-    const routeName = getFocusedRouteNameFromRoute(route);
-    console.log("Route Name is ", routeName);
-    if (tabHiddenRoutes.includes(routeName as string)) {
-      console.log("Kapat ", routeName);
-      navigation.setOptions({ tabBarStyle: { display: "none" } });
-    } else {
-      console.log("Aç ", routeName);
-      navigation.setOptions({ tabBarStyle: { display: "true" } });
-    }
-  }, [navigation, route]);
-
+const MainStack = () => {
   return (
     <Stack.Navigator initialRouteName="Home">
       <Stack.Screen
@@ -89,8 +75,6 @@ function MainStack({ navigation, route }: any) {
       />
     </Stack.Navigator>
   );
-}
+};
 
-export default function HomeNavigator({ navigation, route }: any) {
-  return <MainStack navigation={navigation} route={route} />;
-}
+export default MainStack;
